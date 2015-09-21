@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -32,8 +33,9 @@ if (e != null){
            for (Getterandsetter loc : list) {
                Getterandsetter newLoc =new Getterandsetter();
                newLoc.setLoc(loc.getLoc());
-
            }
+           ArrayAdapter<Getterandsetter> adapter= new
+                   ArrayAdapter<Getterandsetter>(Neighborhood.this,android.R.layout.simple_list_item_1,locs);
        }
    });
     }
