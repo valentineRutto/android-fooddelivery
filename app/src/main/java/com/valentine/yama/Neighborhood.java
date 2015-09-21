@@ -1,16 +1,36 @@
 package com.valentine.yama;
 
+import android.app.ListActivity;
+import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class Neighborhood extends AppCompatActivity {
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Neighborhood extends ListActivity {
+List<Getterandsetter> locs= new ArrayList<Getterandsetter>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neighborhood);
+
+        ParseQuery<Getterandsetter> query=new ParseQuery<Getterandsetter>("location");
+   query.findInBackground(new FindCallback<Getterandsetter>() {
+       @Override
+       public void done(List<Getterandsetter> list, ParseException e) {
+if (e != null){
+    Toast.makeText(Neighborhood.this, "Error" +e,Toast.LENGTH_SHORT).show();
+}
+       }
+   });
     }
 
     @Override
@@ -35,3 +55,4 @@ public class Neighborhood extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
