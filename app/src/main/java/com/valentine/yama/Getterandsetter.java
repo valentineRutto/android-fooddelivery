@@ -8,10 +8,10 @@ import com.parse.ParseObject;
  */
 @ParseClassName("Neighbourhoods")
 public class Getterandsetter extends ParseObject {
-    public String getName(){
+    public String getLoc(){
         return getString("location");
     }
-    public void setName(String loc){
+    public void setLoc(String loc){
        put("location",loc);
     }
 @Override

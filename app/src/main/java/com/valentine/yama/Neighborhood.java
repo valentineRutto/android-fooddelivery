@@ -29,6 +29,11 @@ List<Getterandsetter> locs= new ArrayList<Getterandsetter>();
 if (e != null){
     Toast.makeText(Neighborhood.this, "Error" +e,Toast.LENGTH_SHORT).show();
 }
+           for (Getterandsetter loc : list) {
+               Getterandsetter newLoc =new Getterandsetter();
+               newLoc.setLoc(loc.getLoc());
+
+           }
        }
    });
     }
