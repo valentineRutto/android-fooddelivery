@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
             ParseUser currentUser = ParseUser.getCurrentUser();
             if (currentUser != null) {
                 // Send logged in users to Welcome.class
-                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                Intent intent = new Intent(MainActivity.this, Neighborhood.class);
                 startActivity(intent);
                 finish();
             } else {

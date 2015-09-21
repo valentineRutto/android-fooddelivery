@@ -17,6 +17,7 @@
 
     <string name="app_id">548086758679006</string>
     <string name="title_activity_fb_login_fragment">FbLoginFragment</string>
+    <string name="title_activity_neighborhood">Neighborhood</string>
 
 
 </resources>
