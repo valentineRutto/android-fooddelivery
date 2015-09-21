@@ -11,5 +11,9 @@ public class Getterandsetter extends ParseObject {
     public String getName(){
         return getString("location");
     }
+    public void setName(String loc){
+       put("location",loc);
+    }
+
 
 }
